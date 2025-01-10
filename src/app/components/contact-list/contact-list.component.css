@@ -1,6 +1,5 @@
-/* Загальний контейнер */
 .main {
-  background: linear-gradient(135deg, #191923, #697594);  /* Темний сучасний градієнт */
+  background: linear-gradient(135deg, #191923, #697594);  
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,14 +9,13 @@
   color: #ffffff;
 }
 
-/* Контейнер з ефектом скла */
 .contact-list-container {
   margin-top: 30px;
   max-width: 600px;
   width: 100%;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1); /* Більш сучасний ефект прозорості */
-  backdrop-filter: blur(10px); /* Чіткіший ефект розмиття */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -31,15 +29,14 @@
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.5); /* Світліший колір */
+  color: rgba(255, 255, 255, 0.5);
   transition: color 0.3s;
 }
 
 .search-input:focus::placeholder {
-  color: rgba(0, 0, 0, 0.4); /* Темніший колір при фокусі, якщо потрібно */
+  color: rgba(0, 0, 0, 0.4);
 }
 
-/* Заголовок */
 .title {
   text-align: center;
   font-size: 30px;
@@ -50,7 +47,6 @@
   letter-spacing: 1px;
 }
 
-/* Пошуковий контейнер */
 .search-container {
   display: flex;
   align-items: center;
@@ -58,7 +54,6 @@
   margin-bottom: 20px;
 }
 
-/* Поле для пошуку */
 .search-input {
   flex-grow: 1;
   padding: 12px 16px;
@@ -76,11 +71,10 @@
   color: #000000;
 }
 
-/* Кнопка "Add Contact" */
 .add-button {
   padding: 12px 20px;
   font-size: 16px;
-  background-color: #e94560; /* Сучасний акцентний колір */
+  background-color: #e94560; 
   color: white;
   border: none;
   border-radius: 12px;
@@ -93,14 +87,12 @@
   transform: scale(1.05);
 }
 
-/* Список контактів */
 .contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Елемент списку */
 .contact-item {
   padding: 18px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -119,7 +111,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Ім'я контакту */
 .contact-name {
   font-size: 20px;
   font-weight: 600;
@@ -127,14 +118,12 @@
   margin: 0;
 }
 
-/* Телефон контакту */
 .contact-phone {
   font-size: 16px;
   color: #ccc;
   margin: 0;
 }
 
-/* Повідомлення про відсутність контактів */
 .no-contacts {
   text-align: center;
   font-size: 18px;

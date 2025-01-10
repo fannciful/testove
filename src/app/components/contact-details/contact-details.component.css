@@ -1,6 +1,5 @@
-/* Загальний контейнер */
 .main{
-  background: linear-gradient(135deg, #191923, #697594); /* Темний сучасний градієнт */
+  background: linear-gradient(135deg, #191923, #697594);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,8 +13,8 @@
     max-width: 600px;
     width: 100%;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.1); /* Більш сучасний ефект прозорості */
-    backdrop-filter: blur(10px); /* Чіткіший ефект розмиття */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -28,7 +27,6 @@
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Заголовок сторінки */
 .details-title {
     text-align: center;
     font-size: 32px;
@@ -39,7 +37,6 @@
     letter-spacing: 1.5px;
 }
 
-/* Контент */
 .details-content {
     font-size: 18px;
     line-height: 1.8;
@@ -52,43 +49,37 @@
 }
 
 .details-content strong {
-    color: #ffffff; /* Виділення важливих елементів */
+    color: #ffffff; 
 }
 
-/* Контейнер для кнопок */
 .details-actions {
     display: flex;
-    justify-content: center; /* Центрування кнопок */
-    align-items: center; /* Вирівнювання по вертикалі */
-    gap: 10px; /* Відстань між кнопками */
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
     margin-top: 10px;
 }
 
-/* Кнопки */
 .edit-button,
 .delete-button {
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #e94560; /* Сучасний акцентний колір */
+    background-color: #e94560; 
     color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s;
-
-    /* Однаковий розмір кнопок */
-    min-width: 120px; /* Мінімальна ширина */
-    text-align: center; /* Центрування тексту всередині кнопки */
+    min-width: 120px; 
+    text-align: center; 
 }
 
-/* Ефект при наведенні */
 .edit-button:hover,
 .delete-button:hover {
     background-color: #d1364a;
     transform: scale(1.05);
 }
 
-/* Додаткові стилі */
 .details-footer {
     margin-top: 30px;
     text-align: center;

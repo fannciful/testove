@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'; // Додайте цей імпорт
+import { Injectable } from '@angular/core'; 
 
 export interface Contact {
   id: string;
@@ -14,13 +14,12 @@ export interface Contact {
   providedIn: 'root',
 })
 export class ContactService {
-  private storageKey = 'contacts'; // Ключ для LocalStorage
+  private storageKey = 'contacts'; 
 
   constructor() {
     this.loadInitialData();
   }
 
-  // Завантаження контактів з LocalStorage або початкових даних
   private loadInitialData(): void {
     const storedContacts = localStorage.getItem(this.storageKey);
     if (!storedContacts) {
@@ -28,7 +27,6 @@ export class ContactService {
     }
   }
 
-  // Ініціалізація початкових контактів
   private initDefaultContacts(): void {
     const defaultContacts: Contact[] = [
       {
@@ -54,26 +52,22 @@ export class ContactService {
     localStorage.setItem(this.storageKey, JSON.stringify(defaultContacts));
   }
 
-  // Отримання всіх контактів
   getContacts(): Contact[] {
     const storedContacts = localStorage.getItem(this.storageKey);
     return storedContacts ? JSON.parse(storedContacts) : [];
   }
 
-  // Отримання контакту за ID
   getContactById(id: string): Contact | undefined {
     const contacts = this.getContacts();
     return contacts.find(contact => contact.id === id);
   }
 
-  // Додавання нового контакту
   addContact(contact: Contact): void {
     const contacts = this.getContacts();
     contacts.push(contact);
     localStorage.setItem(this.storageKey, JSON.stringify(contacts));
   }
 
-  // Оновлення контакту
   updateContact(contact: Contact): void {
     const contacts = this.getContacts();
     const index = contacts.findIndex(c => c.id === contact.id);
@@ -83,7 +77,6 @@ export class ContactService {
     }
   }
 
-  // Видалення контакту
   deleteContact(id: string): void {
     let contacts = this.getContacts();
     contacts = contacts.filter(contact => contact.id !== id);

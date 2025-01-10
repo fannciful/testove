@@ -33,7 +33,6 @@ export class ContactFormComponent implements OnInit {
   }
 
   submitForm(): void {
-    // Перевірка обов'язкових полів
     if (!this.contact.firstName.trim() || !this.contact.lastName.trim() || !this.contact.phone.trim()) {
       alert('Please fill out all required fields: First Name, Last Name, Phone number.');
       return;
