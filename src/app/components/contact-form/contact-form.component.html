@@ -1,0 +1,25 @@
+<div>
+    <h1>{{ isEditMode ? 'Edit Contact' : 'Add Contact' }}</h1>
+    <form (ngSubmit)="submitForm()">
+      <label for="firstName">First Name</label>
+      <input id="firstName" [(ngModel)]="contact.firstName" name="firstName" required placeholder="Enter first name" />
+  
+      <label for="lastName">Last Name</label>
+      <input id="lastName" [(ngModel)]="contact.lastName" name="lastName" required placeholder="Enter last name" />
+  
+      <label for="phone">Phone</label>
+      <input id="phone" [(ngModel)]="contact.phone" name="phone" required placeholder="Enter phone number" />
+  
+      <label for="email">Email</label>
+      <input id="email" [(ngModel)]="contact.email" name="email" type="email" placeholder="Enter email" />
+  
+      <label for="address">Address</label>
+      <input id="address" [(ngModel)]="contact.address" name="address" placeholder="Enter address" />
+  
+      <label for="birthDate">Birth Date</label>
+      <input id="birthDate" [(ngModel)]="contact.birthDate" name="birthDate" type="date" />
+  
+      <button type="submit">{{ isEditMode ? 'Save Changes' : 'Add Contact' }}</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,98 @@
+/* Загальний контейнер */
+.main{
+  background: linear-gradient(135deg, #191923, #697594); /* Темний сучасний градієнт */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+.details-container {
+    margin-top: 30px;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Більш сучасний ефект прозорості */
+    backdrop-filter: blur(10px); /* Чіткіший ефект розмиття */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.details-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок сторінки */
+.details-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Контент */
+.details-content {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.details-content p {
+    margin: 15px 0;
+    color: #dcdcdc;
+}
+
+.details-content strong {
+    color: #ffffff; /* Виділення важливих елементів */
+}
+
+/* Контейнер для кнопок */
+.details-actions {
+    display: flex;
+    justify-content: center; /* Центрування кнопок */
+    align-items: center; /* Вирівнювання по вертикалі */
+    gap: 10px; /* Відстань між кнопками */
+    margin-top: 10px;
+}
+
+/* Кнопки */
+.edit-button,
+.delete-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #e94560; /* Сучасний акцентний колір */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+
+    /* Однаковий розмір кнопок */
+    min-width: 120px; /* Мінімальна ширина */
+    text-align: center; /* Центрування тексту всередині кнопки */
+}
+
+/* Ефект при наведенні */
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #d1364a;
+    transform: scale(1.05);
+}
+
+/* Додаткові стилі */
+.details-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #a0a0a0;
+    font-style: italic;
+}

@@ -1,0 +1,18 @@
+<div class="main">
+  <div *ngIf="contact" class="details-container">
+    <h1 class="details-title">Contact Details</h1>
+    <div class="details-content">
+      <p><strong>Name:</strong> {{ contact.firstName }} {{ contact.lastName }}</p>
+      <p><strong>Phone:</strong> {{ contact.phone }}</p>
+      <p><strong>Email:</strong> {{ contact.email }}</p>
+      <p><strong>Address:</strong> {{ contact.address }}</p>
+      <p><strong>Birth Date:</strong> {{ contact.birthDate }}</p>
+    </div>
+    <div class="details-actions">
+      <button class="edit-button" (click)="editContact()">Edit</button>
+      <button class="delete-button" (click)="deleteContact()">Delete</button>
+    </div>
+  </div>
+</div>
+
+  

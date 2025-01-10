@@ -1,0 +1,31 @@
+<div class="main">
+<div class="contact-list-container">
+    <h1 class="title">Contact List</h1>
+  
+    <div class="search-container">
+      <input
+        class="search-input"
+        [(ngModel)]="searchTerm"
+        placeholder="Search contacts..."
+      />
+      <button class="add-button" (click)="addContact()">Add Contact</button>
+    </div>
+  
+    <ul class="contact-list" *ngIf="filteredContacts.length > 0; else noContacts">
+      <li
+        class="contact-item"
+        *ngFor="let contact of filteredContacts"
+        (click)="viewContact(contact.id)">
+        <p class="contact-name">
+          {{ contact.firstName }} {{ contact.lastName }}
+        </p>
+        <p class="contact-phone">{{ contact.phone }}</p>
+      </li>
+    </ul>
+  
+    <ng-template #noContacts>
+      <p class="no-contacts">No contacts found</p>
+    </ng-template>
+  </div>
+</div>
+  
